@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>14</LangVersion>
+    <Nullable>enable</Nullable>
+    <WarningsAsErrors>nullable</WarningsAsErrors>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>Content.RTFlushRepro</AssemblyName>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <OutputPath>bin/Content.Client/</OutputPath>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Resources.Extensions" />
+    <Compile Remove="RobustToolbox/**" />
+    <EmbeddedResource Remove="RobustToolbox/**" />
+    <None Remove="RobustToolbox/**" />
+  </ItemGroup>
+
+  <Import Project="RobustToolbox/Imports/Client.props" />
+  <Import Project="RobustToolbox/Imports/Shared.props" />
+  <Import Project="RobustToolbox/MSBuild/Robust.Properties.targets" />
+</Project>
