@@ -5,12 +5,10 @@ secondary SDL/OpenGL windows in order to reproduce a deadlock involving
 Clyde's secondary-window blit path and the cross-context GL fence wait
 when running on NVIDIA/Wayland.
 
-`RobustToolbox/` is pinned to the RT revision currently used by
-upstream OpenDream:
+`RobustToolbox/` is pinned to the RT revision containing the fence-flush fix:
 
 ```text
-v277.0.0
-08a3d120b7029d03e60b44b23fed2b2659ed3224
+0b2c9f32ffbb76d119b6cebb6b9b6e5ae2db594c
 ```
 
 ## Requirements
